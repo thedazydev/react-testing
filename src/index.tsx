@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Application from './components/application/application';
+import Greet from './components/greet/greet';
+import { Skills } from './components/skills/skills';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+const skills = ["HTML", "CSS", "JavaScript", "React"];
+const names = ["John", "Jane", "Mary", "Sarah", "Mike"];
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,6 +15,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Application />
+    <Greet />
+    <Skills skills={skills} names={names}/>
   </React.StrictMode>
 );
 

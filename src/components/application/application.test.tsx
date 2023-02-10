@@ -49,9 +49,16 @@ describe('Application', () => {
 
     it('should render paragraph', () => {
         render(<Application />);
-        const paragraph = screen.getByText(/all fields are mandatory/i)
+        const paragraph = screen.getByText('fields are mandatory', {exact: false});
         expect(paragraph).toBeInTheDocument();
     })
+
+    it('should render paragraph content', () => {
+        render(<Application />);
+        const paragraph = screen.getByText((content) => content.startsWith('All'));
+        expect(paragraph).toBeInTheDocument();
+    })
+
 
     it('should render element with start value', () => {
         render(<Application />);
