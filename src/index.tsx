@@ -1,22 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Application from './components/application/application';
-import Greet from './components/greet/greet';
-import { Skills } from './components/skills/skills';
+// import Application from './components/application/application';
+// import Counter from './components/counter/counter';
+// import Greet from './components/greet/greet';
+// import { Skills } from './components/skills/skills';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
-const skills = ["HTML", "CSS", "JavaScript", "React"];
-const names = ["John", "Jane", "Mary", "Sarah", "Mike"];
+// const skills = ["HTML", "CSS", "JavaScript", "React"];
+// const names = ["John", "Jane", "Mary", "Sarah", "Mike"];
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Application />
+    {/* <Application />
     <Greet />
     <Skills skills={skills} names={names}/>
+    <Counter /> */}
+    <App />
   </React.StrictMode>
 );
 
